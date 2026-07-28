@@ -1,31 +1,35 @@
-import { Phone, Mail, MapPin, ShieldCheck, CreditCard, Headphones } from 'lucide-react';
+import { Phone, Mail, MapPin, ShieldCheck, CreditCard, Headset } from 'lucide-react';
 import { FacebookIcon, InstagramIcon, TwitterIcon, YoutubeIcon, LinkedinIcon } from './SocialIcons';
 import logo from '../assets/images/fixzzy-logo.png';
+import { Link } from "react-router-dom";
 
 const QUICK_LINKS = [
   { label: 'Home', href: '#top' },
+  { label: 'About Us', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Why Fixzzy', href: '#why-fixzzy' },
   { label: 'Become a Partner', href: '#become-a-pro' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact Us', href: '#contact' },
 ];
 
 const CUSTOMER_LINKS = [
-  { label: 'Services', href: '#services' },
-  { label: 'Emergency Services', href: '#emergency' },
-  { label: 'How Fixzzy Works', href: '#' },
-  { label: 'FAQs', href: '#faq' },
-  { label: 'Privacy Policy', href: '#' },
+  { label: "Services", href: "#services" },
+  { label: "Emergency Services", href: "#emergency" },
+  { label: "How Fixzzy Works", href: "#business-model" },
+  { label: "FAQs", href: "#faq" },
+
+  { label: "Privacy Policy", to: "/privacy-policy" },
+  { label: "Terms & Conditions", to: "/terms-and-conditions" },
+  { label: "Refund & Cancellation Policy", to: "/refund-cancellation-policy" },
 ];
 
 const PARTNER_LINKS = [
   { label: 'Become a Partner', href: '#become-a-pro' },
   { label: 'Partner Benefits', href: '#' },
-  { label: 'Earnings & Payouts', href: '#' },
+  { label: 'Partner Terms', href: '#' },
   { label: 'Safety Guidelines', href: '#' },
   { label: 'Partner Support', href: '#' },
 ];
-
 // Not yet live — connect real profile URLs when accounts are ready.
 const SOCIALS = [
   { Icon: InstagramIcon, label: 'Instagram' },
@@ -38,7 +42,7 @@ const SOCIALS = [
 const TRUST_STRIP = [
   { label: 'Verified Professionals', icon: ShieldCheck },
   { label: 'Secure Payments', icon: CreditCard },
-  { label: 'Customer Support', icon: Headphones },
+  { label: 'Customer Support', icon: Headset },
 ];
 
 const scrollToId = (id) => (e) => {
@@ -54,7 +58,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-brand-900 text-brand-100 pt-16 pb-8">
       <div className="container-px mx-auto max-w-[1440px]">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-10 border-b border-white/10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-10 border-b border-white/10">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2">
               <img src={logo} alt="Fixzzy" className="h-9 w-auto object-contain" />
@@ -126,13 +130,29 @@ export default function Footer() {
 function FooterCol({ title, items }) {
   return (
     <div>
-      <p className="text-white font-display font-bold text-sm mb-4">{title}</p>
+      <p className="text-white font-display font-bold text-sm mb-4">
+        {title}
+      </p>
+
       <ul className="space-y-3 text-sm text-brand-200">
         {items.map((item) => (
           <li key={item.label}>
-            <a href={item.href} onClick={scrollToId(item.href)} className="hover:text-white transition-colors">
-              {item.label}
-            </a>
+            {item.to ? (
+              <Link
+                to={item.to}
+                className="hover:text-white transition-colors"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                href={item.href}
+                onClick={scrollToId(item.href)}
+                className="hover:text-white transition-colors"
+              >
+                {item.label}
+              </a>
+            )}
           </li>
         ))}
       </ul>

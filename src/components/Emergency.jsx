@@ -38,7 +38,7 @@ export default function Emergency() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-rose-50 via-rose-50 to-orange-50 grid lg:grid-cols-[0.95fr_1.45fr_auto] items-center gap-10 px-8 sm:px-12 py-10 lg:py-12"
+          className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-rose-50 via-rose-50 to-orange-50 grid lg:grid-cols-[0.95fr_1.45fr_auto] items-center gap-10 px-5 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12"
         >
           <div>
             <span className="inline-flex items-center gap-1.5 text-accent-red text-xs font-bold tracking-widest uppercase">
@@ -60,20 +60,20 @@ export default function Emergency() {
             <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
               {TRUST_ROW.map((item) => (
                 <span key={item.label} className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600">
-                  <item.icon className="w-3.5 h-3.5 text-accent-red" />
+                  <item.icon className="w-3.5 h-3.5 text-accent-red shrink-0" />
                   {item.label}
                 </span>
               ))}
             </div>
 
-            <div className="mt-7 flex gap-3">
+            <div className="mt-7 flex gap-2 sm:gap-3">
               {BADGES.map((b) => (
                 <div
                   key={b.label}
-                  className="flex flex-col items-center justify-center gap-1.5 bg-white rounded-xl px-4 py-3 shadow-sm w-24 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                  className="flex flex-col items-center justify-center gap-1.5 bg-white rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 shadow-sm w-[72px] sm:w-24 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
                 >
                   <b.icon className={`w-5 h-5 ${b.tint}`} />
-                  <span className="text-[11px] font-medium text-slate-600 text-center leading-tight">{b.label}</span>
+                  <span className="text-[10px] sm:text-[11px] font-medium text-slate-600 text-center leading-tight">{b.label}</span>
                 </div>
               ))}
             </div>

@@ -111,10 +111,10 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+  {/* Mobile menu */}
       <div
         className={`lg:hidden overflow-hidden bg-brand-700/98 backdrop-blur-xl border-t border-white/10 transition-[max-height,opacity] duration-300 ease-in-out ${
-          open ? 'max-h-[520px] opacity-100' : 'max-h-0 opacity-0'
+          open ? 'max-h-[80vh] opacity-100 overflow-y-auto' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="px-5 pb-5 pt-3 flex flex-col gap-1">

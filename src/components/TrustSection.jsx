@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, IdCard, Truck, DollarSign, CreditCard, Star } from 'lucide-react';
+import { ShieldCheck, IdCard, Truck, DollarSign, CreditCard, Star, Headset } from 'lucide-react';
 
 const TRUST_ITEMS = [
   { title: 'Background Verified', desc: 'Every professional is verified', icon: ShieldCheck },
-  { title: 'ID & Address Verified', desc: 'Your safety is our priority', icon: IdCard },
+  { title: 'Customer Support', desc: "We're here when you need us", icon: Headset },
   { title: 'Real-time Tracking', desc: 'See your pro on the way', icon: Truck },
   { title: 'Upfront Pricing', desc: 'No hidden charges', icon: DollarSign },
   { title: 'Secure Payments', desc: '100% safe payments', icon: CreditCard },

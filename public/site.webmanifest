@@ -1,0 +1,15 @@
+{
+  "name": "Fixzzy",
+  "short_name": "Fixzzy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1F5E3B",
+  "icons": [
+    {
+  "src": "/favicon.png",
+  "sizes": "512x512",
+  "type": "image/png"
+}
+  ]
+}
