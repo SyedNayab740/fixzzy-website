@@ -93,7 +93,7 @@ export default function Footer() {
           <div>
             <p className="text-white font-display font-bold text-sm mb-4">Contact</p>
             <ul className="space-y-3 text-sm text-brand-200">
-              <li className="flex items-start gap-2"><Phone className="w-4 h-4 mt-0.5 shrink-0" /> +91 12345 67890</li>
+              <li className="flex items-start gap-2"><Phone className="w-4 h-4 mt-0.5 shrink-0" /> +91 6281332854</li>
               <li className="flex items-start gap-2"><Mail className="w-4 h-4 mt-0.5 shrink-0" /> support@fixzzy.in</li>
               <li className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 shrink-0" /> Nandyal, Andhra Pradesh, India</li>
             </ul>

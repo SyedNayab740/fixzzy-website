@@ -237,7 +237,7 @@ export default function TermsAndConditions() {
 
   <p><strong>Fixzzy Technologies</strong></p>
   <p>Email: support@fixzzy.in</p>
-  <p>Phone: +91 12345 67890</p>
+  <p>Phone: +91 6281332854</p>
   <p>Location: Nandyal, Andhra Pradesh, India</p>
   <p>Business Hours: Monday – Saturday, 9:00 AM – 7:00 PM</p>
 </section>
