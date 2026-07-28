@@ -1,21 +1,23 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { initGA, trackPageView } from "./utils/analytics";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Emergency from "./components/Emergency";
-import TrustSection from "./components/TrustSection";
-import PartnerSection from "./components/PartnerSection";
-import HowItWorks from "./components/HowItWorks";
-import AppDownload from "./components/AppDownload";
-import AboutFixzzy from "./components/AboutFixzzy";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 import TermsAndConditions from "./components/TermsAndConditions";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import RefundCancellationPolicy from "./components/RefundCancellationPolicy";
+
+// Lazy Loaded Components
+const Services = lazy(() => import("./components/Services"));
+const Emergency = lazy(() => import("./components/Emergency"));
+const TrustSection = lazy(() => import("./components/TrustSection"));
+const PartnerSection = lazy(() => import("./components/PartnerSection"));
+const HowItWorks = lazy(() => import("./components/HowItWorks"));
+const AppDownload = lazy(() => import("./components/AppDownload"));
+const AboutFixzzy = lazy(() => import("./components/AboutFixzzy"));
 
 function AnalyticsTracker() {
   const location = useLocation();
@@ -44,13 +46,16 @@ function HomePage() {
 
       <main>
         <Hero />
-        <Services />
-        <Emergency />
-        <TrustSection />
-        <PartnerSection />
-        <HowItWorks />
-        <AppDownload />
-        <AboutFixzzy />
+
+        <Suspense fallback={null}>
+          <Services />
+          <Emergency />
+          <TrustSection />
+          <PartnerSection />
+          <HowItWorks />
+          <AppDownload />
+          <AboutFixzzy />
+        </Suspense>
       </main>
 
       <Footer />

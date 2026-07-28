@@ -60,12 +60,12 @@ export default function Header() {
           />
           <span className="flex flex-col leading-none">
             <span className="font-display font-extrabold text-xl lg:text-[22px] tracking-tight">
-              <span className="text-white">Fix</span>
-              <span className="text-emerald-400">zzy</span>
-            </span>
+  <span className="text-white">Fix</span>
+<span style={{ color: "#00B038" }}>zzy</span>
+</span>
             <span className="text-[9px] lg:text-[10px] text-brand-100/90 tracking-wide">
-              We Fix Your Home.
-            </span>
+  Your Trusted Home Partner
+</span>
           </span>
         </a>
 

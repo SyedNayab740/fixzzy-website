@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Wrench, Wind, Radio, ShieldCheck, MapPin, Bolt } from 'lucide-react';
 import PhoneFrame from './PhoneFrame';
-import emergencyBanner from '../assets/images/emergency-banner.png';
+import emergencyBanner from '../assets/images/emergency-banner.webp';
 
 const BADGES = [
   { label: 'Electrician', icon: Zap, tint: 'text-accent-yellow' },
@@ -84,19 +84,23 @@ export default function Emergency() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="hidden lg:block relative rounded-[1.5rem] overflow-hidden shadow-[0_24px_60px_-15px_rgba(15,23,42,0.3)]"
+            className="relative rounded-[1.5rem] overflow-hidden shadow-[0_24px_60px_-15px_rgba(15,23,42,0.3)] max-w-md mx-auto lg:max-w-none"
           >
-            <img
-              src={emergencyBanner}
-              alt="Fixzzy emergency technician with service van"
-              className="w-full h-[380px] object-cover object-top select-none"
-              draggable={false}
-            />
+          <img
+  src={emergencyBanner}
+  alt="Fixzzy emergency technician with service van"
+  className="w-full h-[380px] object-contain object-top select-none"
+  width="700"
+  height="380"
+  loading="lazy"
+  decoding="async"
+  draggable={false}
+/>
           </motion.div>
 
           <motion.div
             whileHover={{ y: -6 }}
-            className="hidden lg:block"
+           className="block lg:block"
           >
             <PhoneFrame className="scale-90 origin-bottom">
               <div className="h-full flex flex-col bg-white">

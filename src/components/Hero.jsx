@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowRight, Home, Wrench, Zap, Paintbrush, Hammer, Search, ChevronRight } from 'lucide-react';
 import PhoneFrame from './PhoneFrame';
 import Counter from './Counter';
-import heroWorker from '../assets/images/hero-worker.png';
+import heroWorker from '../assets/images/hero-worker.webp';
 
 const TRUST_ROW = [
   'ID & Aadhaar Verified',
@@ -105,7 +105,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Right column: worker + phone */}
-        <div className="relative h-[460px] sm:h-[560px] flex items-end justify-center lg:justify-end">
+        <div className="relative h-[560px] sm:h-[620px] lg:h-[560px] flex items-end justify-center lg:justify-end">
           <motion.div
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -118,14 +118,18 @@ export default function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-           className="absolute left-1/2 -translate-x-1/2 lg:left-[26%] lg:-translate-x-1/2 -bottom-6 sm:-bottom-8 lg:-bottom-10 z-10 w-[320px] sm:w-[420px] lg:w-[520px] xl:w-[560px] pointer-events-none"
+         className="absolute left-1/2 -translate-x-1/2 lg:left-[26%] lg:-translate-x-1/2 bottom-0 sm:-bottom-4 lg:-bottom-10 z-10 w-[88vw] max-w-[430px] sm:max-w-[520px] lg:max-w-[560px] pointer-events-none"
           >
-            <img
-              src={heroWorker}
-              alt="Fixzzy technician"
-              className="w-full h-auto object-contain drop-shadow-2xl select-none"
-              draggable={false}
-            />
+           <img
+  src={heroWorker}
+  alt="Fixzzy technician"
+  className="w-full h-auto object-contain drop-shadow-2xl select-none"
+  width="560"
+  height="900"
+  fetchPriority="high"
+  decoding="async"
+  draggable={false}
+/>
           </motion.div>
 
           <motion.div

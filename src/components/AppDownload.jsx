@@ -14,7 +14,15 @@ export default function AppDownload() {
           className="relative overflow-hidden rounded-[2rem] bg-brand-800 grid lg:grid-cols-[auto_1fr_auto] items-center gap-6 px-8 sm:px-12 py-8"
         >
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Fixzzy" className="h-8 w-auto object-contain" />
+         <img
+  src={logo}
+  alt="Fixzzy"
+  className="h-8 w-auto object-contain"
+  width="128"
+  height="32"
+  loading="lazy"
+  decoding="async"
+/>
             <span className="font-display font-extrabold text-lg">
               <span className="text-white">Fix</span>
               <span className="text-emerald-400">zzy</span>
