@@ -85,12 +85,15 @@ export default function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/delete-account" element={<DeleteAccount />} />
           <Route path="/refund-cancellation-policy" element={<RefundCancellationPolicy />} />
+          <Route path="/partner-account-deletion" element={<PartnerAccountDeletion />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </div>
   );
 }
+
+
 
 
 
