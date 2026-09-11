@@ -29,6 +29,7 @@ const PARTNER_LINKS = [
   { label: 'Partner Terms', href: '#' },
   { label: 'Safety Guidelines', href: '#' },
   { label: 'Partner Support', href: '#' },
+  { label: 'Partner Account Deletion', to: '/partner-account-deletion' },
 ];
 // Not yet live — connect real profile URLs when accounts are ready.
 const SOCIALS = [
