@@ -10,6 +10,7 @@ const NotFound = lazy(() => import("./components/NotFound"));
 const TermsAndConditions = lazy(() => import("./components/TermsAndConditions"));
 const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
 const DeleteAccount = lazy(() => import("./components/DeleteAccount"));
+const PartnerAccountDeletion = lazy(() => import("./components/PartnerAccountDeletion"));
 const RefundCancellationPolicy = lazy(() => import("./components/RefundCancellationPolicy"));
 const Services = lazy(() => import("./components/Services"));
 const Emergency = lazy(() => import("./components/Emergency"));
@@ -90,5 +91,6 @@ export default function App() {
     </div>
   );
 }
+
 
 
